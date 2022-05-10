@@ -1,0 +1,17 @@
+#!/bin/bash
+
+#SBATCH -J graph500_36
+#SBATCH -p general
+#SBATCH -o job-output/g500-36_%j.txt
+#SBATCH -e job-output/g500-36_%j.err
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=pratsriv@iu.edu
+#SBATCH --nodes=2
+#SBATCH --ntasks-per-node=48
+#SBATCH --time=01:00:00
+#SBATCH --mem=58G
+
+#Load any modules that your program needs
+module load openmpi/intel/4.0.4
+
+#Run your program
